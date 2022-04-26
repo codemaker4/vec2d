@@ -17,9 +17,9 @@ console.log(c.mag()) // 5
 // a^2 + b^2 = c^2
 ```
 ```js
-let pos = new Vector(0,0) // define a postiion
-let vel = new Vector(0,0) // define a velocity
-let grav = new Vector(0,9.8) // define a gravitational force
+let pos = new Vector2d(0,0) // define a postiion
+let vel = new Vector2d(0,0) // define a velocity
+let grav = new Vector2d(0,9.8) // define a gravitational force
 
 setInterval(()=>{
   vel.add(grav) // apply the force
