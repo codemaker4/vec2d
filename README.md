@@ -5,7 +5,7 @@ A simple 2d vector library for JavaScript.
 Either download cmvec2d.js or import the script with this script tag:
 
 ```html
-<script src="https://raw.githubusercontent.com/codemaker4/vec2d/master/vec2d.js"></script>
+<script src="https://codemaker4.github.io/vec2d/vec2d.js"></script>
 ```
 
 ## examples
