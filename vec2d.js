@@ -12,6 +12,8 @@
  * @author CodeMaker_4
 */
 class Vec2d {
+    static library = "codemaker4/vec2d";
+    static version = 1;
     /**
      * Create a new 2d vector with a given x and y.
      * 
