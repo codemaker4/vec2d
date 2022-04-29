@@ -42,7 +42,7 @@ class Vec2d {
      */
     static randAngle(magnitude = 1) {
         let angle = Math.random() * Math.PI * 2;
-        return new Vector(Math.cos(angle)*magnitude, Math.sin(angle)*magnitude);
+        return new Vec2d(Math.cos(angle)*magnitude, Math.sin(angle)*magnitude);
     }
 
     /**
@@ -51,7 +51,7 @@ class Vec2d {
      * @returns {Vec2d} The new vector.
      */
     static rand2D(maxMagnitude = 1) {
-        return Vector.randAngle().mult(Math.random() * maxMagnitude);
+        return Vec2d.randAngle().mult(Math.random() * maxMagnitude);
     }
 
     /**
@@ -64,7 +64,7 @@ class Vec2d {
      * @returns {Vec2d} The new vector.
      */
     static randBox(width, height = width) {
-        return new Vector(Math.random()*width, Math.random()*height);
+        return new Vec2d(Math.random()*width, Math.random()*height);
     }
 
     /**
@@ -199,7 +199,7 @@ class Vec2d {
     setMag(newMag) {
         let mag = this.mag();
         if (mag == 0) { // if no direction make up something random
-            this.set(Vector.randAngle().mult(newMag));
+            this.set(Vec2d.randAngle().mult(newMag));
             return this;
         }
         this.mult(newMag/this.mag());
