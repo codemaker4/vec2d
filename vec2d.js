@@ -87,6 +87,18 @@ class Vec2d {
     }
 
     /**
+     * Copy the given x and y component values into this vector, overwriting the old values.
+     * @param {number} x The new X component.
+     * @param {number} y The new Y component.
+     * @returns {Vec2d} this
+     */
+    setXY(x, y) {
+        this.x = x;
+        this.y = y;
+        return this; 
+    }
+
+    /**
      * Add a given vector to this vector. This changes this vector, but leaves the other intact.
      * @param {Vec2d} other The vector to add to this vector.
      * @returns {Vec2d} this
