@@ -275,6 +275,17 @@ class Vec2d {
     }
 
     /**
+     * Linearly interpolate this vector to another vector by a given factor between 0 and 1.
+     * @param {Vec2d} other The vector to move towards
+     * @param {number} amount The factor of relative distance to cover. 0 = don't move at all, 1 = move completely to the other vector, 0.5 = go halfway.
+     * @returns {Vec2d}
+     */
+    lerpTo(other, amount) {
+        this.add(other.copy().sub(this).mult(amount));
+        return this;
+    }
+
+    /**
      * Check if one of the components is NaN. Handy for error assertion.
      * @returns {boolean} True if there is a NaN.
      */
